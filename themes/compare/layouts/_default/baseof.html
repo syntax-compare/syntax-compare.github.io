@@ -5,11 +5,19 @@
 </head>
 <body>
   <header>
-    {{ partial "header.html" . }}
+    {{ partial "navbar.html" . }}
   </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
+  
+  <div class="columns">
+    <div class="column is-one-quarter">
+      {{ partial "sidebar.html" . }}
+    </div>
+    <div class="column">
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </div>
   <footer>
     {{ partial "footer.html" . }}
   </footer>
