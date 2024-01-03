@@ -1,8 +1,9 @@
 {{ define "main" }}
-  <section class="section">
-    <main class="container">
-      <h1 class="title">Page not found</h1>
+  <div class="col-md-6 main-content">
+    <div class="text-center">
+      <h2 class="text-secondary h2">{{ .Title }}</h2>
       <a href="/">Go Home</a>
-    </main>
-  </section>
+    </div>
+    {{ .Content }}
+  </div>
 {{ end }}

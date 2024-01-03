@@ -7,3 +7,90 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+menu:
+  sidebar:
+    - name: Overall
+      weight: 1
+    - name: Coding Convention
+      parent: Overall
+      url: /categories/coding-convention
+      weight: 1
+    - name: Basic Types
+      parent: Overall
+      url: /categories/basic-types
+      weight: 2
+    - name: Comments
+      parent: Overall
+      url: /categories/comments
+      weight: 3
+
+    - name: Conditions
+      weight: 2
+    - name: If - Else
+      parent: Conditions
+      url: /categories/if-else
+      weight: 1
+    - name: Switch (When)
+      parent: Conditions
+      url: /categories/switch-when
+      weight: 2
+    - name: Ternary Operator
+      parent: Conditions
+      url: /categories/ternary-operator
+      weight: 3
+
+    - name: Loops
+      weight: 3
+    - name: For Loop with Index
+      parent: Loops
+      url: /categories/for-loop-with-index
+      weight: 1
+    - name: For Loop over Collection
+      parent: Loops
+      url: /categories/for-loop-over-collection
+      weight: 2
+
+    - name: Collections
+      weight: 4
+    - name: Array & List
+      parent: Collections
+      url: /categories/array-list
+      weight: 1
+    - name: Map & Dictionary
+      parent: Collections
+      url: /categories/map-dictionary
+      weight: 2
+    - name: Set
+      parent: Collections
+      url: /categories/set
+      weight: 3
+
+    - name: String
+      weight: 5
+    - name: String Template
+      parent: String
+      url: /categories/string-template
+      weight: 1
+    - name: String Split
+      parent: String
+      url: /categories/string-split
+      weight: 2
+
+    - name: Class
+      weight: 6
+    - name: Class Overall
+      parent: Class
+      url: /categories/class-overall
+      weight: 1
+    - name: Constructor
+      parent: Class
+      url: /categories/constructor
+      weight: 2
+
+    - name: Practical
+      weight: 6
+    - name: Date
+      parent: Practical
+      url: /categories/date
+      weight: 1

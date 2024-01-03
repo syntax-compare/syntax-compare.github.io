@@ -1,0 +1,12 @@
+{{/*  for "term" pages like /categories/coding-convention/  */}}
+{{/*  https://gohugo.io/templates/lookup-order/#term-pages  */}}
+{{ define "main" }}
+  <div class="col-md-6 main-content">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+      <h2><a href="{{ .RelPermalink }}">{{ .Params.language }}</a></h2>
+      {{ .Summary }}
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,7 +1,11 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <!-- Main Content -->
+  <div class="col-md-6 main-content">
+    <div class="text-center">
+      {{ with .Params.subtitle }}
+      <h2 class="text-secondary h2">{{ . }}</h2>
+      {{ end }}
+    </div>
+    {{ .Content }}
+  </div>
 {{ end }}
