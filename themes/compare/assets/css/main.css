@@ -1,22 +1,9 @@
-/* body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+body {
+  padding-top: 64px; /* Adjust this value based on your navbar height */
 }
-
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+.sidebar {
+  padding-top: 20px;
 }
-
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+.toc-sidebar {
+  padding-top: 20px;
 }
-
-a {
-  color: #00e;
-  text-decoration: none;
-} */
