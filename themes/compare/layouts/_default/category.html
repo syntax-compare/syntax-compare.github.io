@@ -4,9 +4,13 @@
   <div class="col-md-6 main-content">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+    <div class="d-flex justify-content-between">
     {{ range .Pages }}
-      <h2><a href="{{ .RelPermalink }}">{{ .Params.language }}</a></h2>
-      {{ .Summary }}
+      <div class="content-lang {{ .Params.language }} d-none">  {{/*  d-none : display:none  */}}
+        <h2><a href="{{ .RelPermalink }}">{{ .Params.language }}</a></h2>
+        {{ .Summary }}
+      </div>
     {{ end }}
+    </div>
   </div>
 {{ end }}
