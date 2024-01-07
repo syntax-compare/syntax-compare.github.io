@@ -5,11 +5,23 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     <div class="d-flex justify-content-between">
-    {{ range .Pages }}
-      <div class="content-lang {{ .Params.language }} d-none">  {{/*  d-none : display:none  */}}
-        <h2><a href="{{ .RelPermalink }}">{{ .Params.language }}</a></h2>
-        {{ .Summary }}
-      </div>
+    {{ $pages := .Pages }}
+    {{ with index .Site.Data.language.languageOrder }}
+      {{ range . }}
+        {{ $curLang := . }}
+        {{ $selectedPage := index (where $pages "Params.language" $curLang) 0 }}
+        {{ if $selectedPage }}
+          <div class="content-lang {{ $curLang }} d-none">  {{/*  d-none : display:none  */}}
+            <h2><a href="{{ $selectedPage.RelPermalink }}">{{ $selectedPage.Params.language }}</a></h2>
+            {{ $selectedPage.Summary }}
+          </div>
+        {{ else }}
+          <div class="content-lang {{ $curLang }} d-none">  {{/*  d-none : display:none  */}}
+            <h2><a>{{ $curLang }}</a></h2>
+            <p>Not ready yet.</p>
+          </div>
+        {{ end }} 
+      {{ end }}
     {{ end }}
     </div>
   </div>
