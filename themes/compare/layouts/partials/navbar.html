@@ -14,10 +14,11 @@
             Python
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownLanguageLeft">
-            <li><a class="dropdown-item" href="#">Python</a></li>
-            <li><a class="dropdown-item" href="#">Dart</a></li>
-            <li><a class="dropdown-item" href="#">Cpp</a></li>
-            <li><a class="dropdown-item" href="#">Kotlin</a></li>
+            {{ with index .Site.Data.language.languageOrder }}
+              {{ range . }}
+                <li><a class="dropdown-item" href="#">{{ . }}</a></li>
+              {{ end }}
+            {{ end }}
           </ul>
         </li>
         <span class="navbar-text ms-4 me-2 collapse navbar-collapse">
@@ -28,10 +29,11 @@
             Dart
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Python</a></li>
-            <li><a class="dropdown-item" href="#">Dart</a></li>
-            <li><a class="dropdown-item" href="#">Cpp</a></li>
-            <li><a class="dropdown-item" href="#">Kotlin</a></li>
+            {{ with index .Site.Data.language.languageOrder }}
+              {{ range . }}
+                <li><a class="dropdown-item" href="#">{{ . }}</a></li>
+              {{ end }}
+            {{ end }}
           </ul>
         </li>
       </ul>

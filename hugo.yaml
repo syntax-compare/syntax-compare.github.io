@@ -8,6 +8,10 @@ markup:
     renderer:
       unsafe: true
 
+taxonomies:
+  category: categories
+  language: language
+
 menu:
   sidebar:
     - name: Overall
