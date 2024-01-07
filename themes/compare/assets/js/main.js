@@ -19,12 +19,12 @@ function refreshAll() {
     content.classList.remove('order-0');
     content.classList.remove('order-1');
   });
-  const contentsLeft = langMap.get(selectedLanguageLeft.toLowerCase());
+  const contentsLeft = langMap.get(selectedLanguageLeft);
   contentsLeft.forEach((content, index) => {
     content.classList.remove('d-none');
     content.classList.add('order-0');
   });
-  const contentsRight = langMap.get(selectedLanguageRight.toLowerCase());
+  const contentsRight = langMap.get(selectedLanguageRight);
   contentsRight.forEach((content, index) => {
     content.classList.remove('d-none');
     content.classList.add('order-1');
@@ -33,11 +33,11 @@ function refreshAll() {
 
 let selectedLanguageLeft = localStorage.getItem("selectedLanguageLeft")
   ? localStorage.getItem("selectedLanguageLeft")
-  : "Python";
+  : "python";
 
 let selectedLanguageRight = localStorage.getItem("selectedLanguageRight")
   ? localStorage.getItem("selectedLanguageRight")
-  : "Dart";
+  : "dart";
   
 console.log("selectedLanguageLeft:", selectedLanguageLeft);
 console.log("selectedLanguageRight:", selectedLanguageRight);
